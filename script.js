@@ -1,61 +1,38 @@
-// Basic interactive behaviors for Pilaniya Farms site
+// script.js — minimal interactions
 document.addEventListener('DOMContentLoaded', function(){
-  // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const siteNav = document.getElementById('siteNav');
-  navToggle.addEventListener('click', () => {
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!expanded));
-    siteNav.style.display = expanded ? '' : 'block';
+  const whatsappOrder = document.getElementById('whatsappOrder');
+  const contactForm = document.getElementById('contactForm');
+
+  navToggle && navToggle.addEventListener('click', function(){
+    siteNav.classList.toggle('show');
   });
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      const href = a.getAttribute('href');
-      if(href.length>1){
+  // Smooth scrolling for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target){
         e.preventDefault();
-        const target = document.querySelector(href);
-        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+        target.scrollIntoView({behavior:'smooth',block:'start'});
+        siteNav.classList.remove('show');
       }
     });
   });
 
-  // Gallery lightbox
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('.lightbox-img');
-  const closeBtn = lightbox.querySelector('.lightbox-close');
-  document.querySelectorAll('.gallery-item').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const src = btn.dataset.src || btn.querySelector('img').src;
-      lightboxImg.src = src;
-      lightboxImg.alt = btn.querySelector('img').alt || '';
-      lightbox.hidden = false;
-    });
+  // WhatsApp quick order button in form
+  whatsappOrder && whatsappOrder.addEventListener('click', function(){
+    const name = document.getElementById('name').value || '';
+    const message = document.getElementById('message').value || '';
+    const text = encodeURIComponent(`Hello Pilaniya Farms, I would like to order:\nName: ${name}\nDetails: ${message}`);
+    window.open(`https://wa.me/917014452926?text=${text}`, '_blank');
   });
-  closeBtn.addEventListener('click', ()=>{ lightbox.hidden = true; lightboxImg.src=''; });
-  lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) { lightbox.hidden=true; lightboxImg.src=''; } });
 
-  // Simple contact form handling (no backend) — show success message
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
-  form.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-    if(!name || !email || !message){
-      status.textContent = 'Please complete all fields.';
-      status.style.color = 'crimson';
-      return;
-    }
-    // pretend to send
-    status.style.color = 'var(--muted)';
-    status.textContent = 'Sending…';
-    setTimeout(()=>{
-      status.style.color = 'green';
-      status.textContent = 'Thanks! Your message has been received. We will reply within 2 business days.';
-      form.reset();
-    }, 900);
+  // Simple form submit handling — use mailto fallback and show notice
+  contactForm && contactForm.addEventListener('submit', function(e){
+    const notice = document.getElementById('formNotice');
+    notice.textContent = 'Preparing your message...';
+    setTimeout(()=>{ notice.textContent = 'Message client opened. If your default mail client did not open, please contact us on WhatsApp.' },800);
   });
 });
