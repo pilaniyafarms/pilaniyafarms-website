@@ -2,132 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pilaniya Farms — Premium Peanuts, Wheat Flour & Whole Spices</title>
-  <meta name="description" content="Pilaniya Farms: sustainably grown premium peanuts, stone-ground wheat flour and whole spices straight from our farm to your kitchen." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pilaniya Farms — From Farm to Family</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet (ensure this path exists and is correct) -->
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="theme-color" content="#0b6b2f">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">Pilaniya Farms</a>
-
-      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-
-      <nav id="siteNav" class="site-nav">
-        <a href="#home">Home</a>
+      <a class="brand" href="/">Pilaniya Farms</a>
+      <nav class="nav" id="nav">
         <a href="#about">About</a>
         <a href="#products">Products</a>
+        <a href="#why">Why Choose Us</a>
         <a href="#contact">Contact</a>
-        <a class="whatsapp-btn" href="https://wa.me/917014452926" target="_blank" rel="noopener">WhatsApp Order</a>
+        <a class="btn btn-green whatsapp-desktop" id="wh-desktop">WhatsApp Order</a>
       </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>From Our Fields to Your Table</h1>
-          <p class="lead">Pilaniya Farms grows and packs premium peanuts, stone-ground wheat flour and carefully selected whole spices — sustainably and with care.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#products">View Products</a>
-            <a class="btn btn-outline" href="https://wa.me/917014452926" target="_blank" rel="noopener">Order on WhatsApp</a>
-          </div>
-        </div>
-        <div class="hero-media">
-          <img src="https://images.unsplash.com/photo-1506807803488-8eafc1536e3d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5d0f9d614b3b8d2c3f63d0f8a2c8c08a" alt="Farming field"/>
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero" style="background-image: url('https://source.unsplash.com/1600x900/?wheat,field')">
+      <div class="container hero-inner">
+        <h1 class="hero-title">From Farm to Family</h1>
+        <p class="hero-sub">Premium, natural produce straight from our fields to your kitchen.</p>
+        <div class="hero-actions">
+          <a class="btn btn-cta" id="wh-hero">Order on WhatsApp</a>
+          <a class="btn btn-outline" href="#products">Explore Products</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-media">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b4b64d2e9f06a2b2b9f4d4c5ecb7b6a" alt="Farmers at work"/>
-          </div>
-          <div class="about-text">
-            <h2>About Pilaniya Farms</h2>
-            <p>Pilaniya Farms is a family-owned farm dedicated to producing high-quality, natural food products. We use traditional methods and sustainable practices to nurture the soil and grow flavorful, nutrient-dense crops.</p>
-            <p>Our mission is simple: deliver honest, transparent products you can trust — premium peanuts, stone-ground wheat flour, and whole spices — carefully processed and packed for freshness.</p>
-            <a class="btn btn-primary" href="#products">Explore Our Products</a>
-          </div>
+    <!-- About -->
+    <section id="about" class="section reveal">
+      <div class="container grid-2">
+        <div>
+          <h2>About Pilaniya Farms</h2>
+          <p>Pilaniya Farms is a family-owned farming brand dedicated to growing and delivering premium, natural agricultural products. From sustainable farming practices to careful post-harvest processing, our aim is to bring the freshest produce directly to families.</p>
+          <ul class="features">
+            <li>Family-owned &amp; operated</li>
+            <li>Sustainable farming practices</li>
+            <li>Traceable produce</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://source.unsplash.com/800x600/?peanut,farm" alt="Peanut farm" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section id="products" class="section products">
+    <!-- Products -->
+    <section id="products" class="section bg-light reveal">
       <div class="container">
         <h2>Our Products</h2>
-        <p class="section-sub">Handpicked, responsibly produced — quality you can taste.</p>
-
-        <div class="products-grid">
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1582719478170-5f7e3f8b1f1f?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a3df9a7b3f6b9b7a2c1f1f5c2e3f2a1" alt="Premium Peanuts" />
+        <div class="cards">
+          <article class="card">
+            <img src="https://source.unsplash.com/800x600/?peanuts" alt="Premium Peanuts" loading="lazy">
             <div class="card-body">
               <h3>Premium Peanuts</h3>
-              <p>Our premium peanuts are grown with care and roasted/packed to preserve natural flavor and crunch. Ideal for snacking, peanut butter, and culinary uses.</p>
-              <a class="btn btn-outline" href="https://wa.me/917014452926" target="_blank" rel="noopener">Order via WhatsApp</a>
+              <p>Hand-picked and sun-dried peanuts with natural flavour and crunchy texture — perfect for snacking and cooking.</p>
+              <a class="btn btn-green" id="order-peanuts">Order via WhatsApp</a>
             </div>
           </article>
 
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1544785349-c4a5301826fd?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=9f4b7b8a5c6d7e8f9a0b1c2d3e4f5a6b" alt="Wheat Flour" />
+          <article class="card">
+            <img src="https://source.unsplash.com/800x600/?wheat,field" alt="Wheat Flour" loading="lazy">
             <div class="card-body">
               <h3>Wheat Flour</h3>
-              <p>Stone-ground wheat flour milled carefully to retain nutrients and flavor. Perfect for breads, rotis, pastries and everyday cooking.</p>
-              <a class="btn btn-outline" href="https://wa.me/917014452926" target="_blank" rel="noopener">Order via WhatsApp</a>
+              <p>Premium whole wheat flour milled with care to retain nutrition and natural taste — ideal for rotis, breads, and baking.</p>
+              <a class="btn btn-green" id="order-flour">Order via WhatsApp</a>
             </div>
           </article>
 
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1604908177522-3d5e5f3c1b23?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c" alt="Whole Spices" />
+          <article class="card">
+            <img src="https://source.unsplash.com/800x600/?whole,spices" alt="Whole Spices" loading="lazy">
             <div class="card-body">
               <h3>Whole Spices</h3>
-              <p>Carefully selected whole spices delivered with full aroma and flavor — perfect for home cooks and small-batch producers who value authenticity.</p>
-              <a class="btn btn-outline" href="https://wa.me/917014452926" target="_blank" rel="noopener">Order via WhatsApp</a>
+              <p>Fresh whole spices sourced directly from our fields and trusted partners — aroma and flavour in every pinch.</p>
+              <a class="btn btn-green" id="order-spices">Order via WhatsApp</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <h2>Contact Us</h2>
-          <p>We’d love to hear from you. For orders and enquiries, message us on WhatsApp or use the form.</p>
-
-          <ul class="contact-list">
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/917014452926" target="_blank" rel="noopener">+91 70144 52926</a></li>
-            <li><strong>Email:</strong> <a href="mailto:info@pilaniyafarms.com">info@pilaniyafarms.com</a></li>
-            <li><strong>Address:</strong> Pilaniya Farms, Rajasthan, India</li>
-          </ul>
-
-          <a class="btn btn-primary" href="https://wa.me/917014452926" target="_blank" rel="noopener">Order on WhatsApp</a>
-        </div>
-
-        <form id="contactForm" class="contact-form" action="mailto:info@pilaniyafarms.com" method="post" enctype="text/plain">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required />
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-
-          <label for="message">Message / Order details</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send</button>
-            <button type="button" id="whatsappOrder" class="btn btn-outline">Order on WhatsApp</button>
+    <!-- Why Choose Us -->
+    <section id="why" class="section reveal">
+      <div class="container">
+        <h2>Why Choose Us</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <svg class="why-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5z"></path></svg>
+            <h4>100% Natural</h4>
+            <p>No additives or preservatives — only nature's best.</p>
           </div>
+          <div class="why-card">
+            <svg class="why-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5z"></path></svg>
+            <h4>Farm Fresh</h4>
+            <p>Harvested and processed with care to retain freshness.</p>
+          </div>
+          <div class="why-card">
+            <svg class="why-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5z"></path></svg>
+            <h4>Premium Quality</h4>
+            <p>We follow strict quality control at every step.</p>
+          </div>
+          <div class="why-card">
+            <svg class="why-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5z"></path></svg>
+            <h4>Direct from Farmer</h4>
+            <p>Cutting out middlemen so you get better value and traceability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <p id="formNotice" class="form-notice" aria-live="polite"></p>
-        </form>
+    <!-- Contact -->
+    <section id="contact" class="section bg-light reveal">
+      <div class="container grid-2">
+        <div>
+          <h2>Contact</h2>
+          <p>Ready to order or want to know more? Message us on WhatsApp.</p>
+          <p class="contact-number">WhatsApp: <a href="https://wa.me/917014452926" target="_blank" rel="noopener">+91 70144 52926</a></p>
+          <div class="contact-actions">
+            <a class="btn btn-green" id="wh-contact">Message on WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-image">
+          <img src="https://source.unsplash.com/800x600/?wheat,flour" alt="Wheat flour" loading="lazy">
+        </div>
       </div>
     </section>
 
@@ -135,14 +144,19 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© Pilaniya Farms — Premium Peanuts, Wheat Flour & Whole Spices</p>
-      <nav class="footer-nav">
-        <a href="#privacy">Privacy</a>
-        <a href="#terms">Terms</a>
-      </nav>
+      <div>
+        <strong>Pilaniya Farms</strong>
+        <p>Premium produce. Direct from our fields to your family.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
+    <div class="footer-bottom">© Pilaniya Farms — All Rights Reserved</div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

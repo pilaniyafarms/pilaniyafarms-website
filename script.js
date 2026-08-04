@@ -1,38 +1,48 @@
-// script.js — minimal interactions
-document.addEventListener('DOMContentLoaded', function(){
-  const navToggle = document.getElementById('navToggle');
-  const siteNav = document.getElementById('siteNav');
-  const whatsappOrder = document.getElementById('whatsappOrder');
-  const contactForm = document.getElementById('contactForm');
+// script.js — Pilaniya Farms
 
-  navToggle && navToggle.addEventListener('click', function(){
-    siteNav.classList.toggle('show');
+const WH_NUMBER = '917014452926';
+const WH_MESSAGE = encodeURIComponent("Hello Pilaniya Farms, I'm interested in ordering your products.");
+
+function openWhatsApp(number = WH_NUMBER, message = WH_MESSAGE){
+  const url = `https://wa.me/${number}?text=${message}`;
+  window.open(url, '_blank');
+}
+
+// Attach buttons
+document.addEventListener('DOMContentLoaded', ()=>{
+  const heroBtn = document.getElementById('wh-hero');
+  const desktopBtn = document.getElementById('wh-desktop');
+  const contactBtn = document.getElementById('wh-contact');
+  const orderPeanuts = document.getElementById('order-peanuts');
+  const orderFlour = document.getElementById('order-flour');
+  const orderSpices = document.getElementById('order-spices');
+
+  if(heroBtn) heroBtn.addEventListener('click', ()=>openWhatsApp());
+  if(desktopBtn) desktopBtn.addEventListener('click', ()=>openWhatsApp());
+  if(contactBtn) contactBtn.addEventListener('click', ()=>openWhatsApp());
+  if(orderPeanuts) orderPeanuts.addEventListener('click', ()=>openWhatsApp(undefined, encodeURIComponent('Hello, I want to order Premium Peanuts')));
+  if(orderFlour) orderFlour.addEventListener('click', ()=>openWhatsApp(undefined, encodeURIComponent('Hello, I want to order Wheat Flour')));
+  if(orderSpices) orderSpices.addEventListener('click', ()=>openWhatsApp(undefined, encodeURIComponent('Hello, I want to order Whole Spices')));
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('nav');
+  navToggle && navToggle.addEventListener('click', ()=>{
+    if(nav.style.display === 'flex') nav.style.display = 'none';
+    else nav.style.display = 'flex';
   });
 
-  // Smooth scrolling for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({behavior:'smooth',block:'start'});
-        siteNav.classList.remove('show');
+  // Simple scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const revealOnScroll = () =>{
+    const windowH = window.innerHeight;
+    reveals.forEach(el=>{
+      const rect = el.getBoundingClientRect();
+      if(rect.top < windowH - 80){
+        el.classList.add('in-view');
       }
     });
-  });
-
-  // WhatsApp quick order button in form
-  whatsappOrder && whatsappOrder.addEventListener('click', function(){
-    const name = document.getElementById('name').value || '';
-    const message = document.getElementById('message').value || '';
-    const text = encodeURIComponent(`Hello Pilaniya Farms, I would like to order:\nName: ${name}\nDetails: ${message}`);
-    window.open(`https://wa.me/917014452926?text=${text}`, '_blank');
-  });
-
-  // Simple form submit handling — use mailto fallback and show notice
-  contactForm && contactForm.addEventListener('submit', function(e){
-    const notice = document.getElementById('formNotice');
-    notice.textContent = 'Preparing your message...';
-    setTimeout(()=>{ notice.textContent = 'Message client opened. If your default mail client did not open, please contact us on WhatsApp.' },800);
-  });
+  }
+  revealOnScroll();
+  window.addEventListener('scroll', revealOnScroll);
 });
