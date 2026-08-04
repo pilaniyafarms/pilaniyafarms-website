@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#a3d39c" />
+      <stop offset="100%" stop-color="#f0d58c" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#f6f3e8" />
+  <!-- stylized rolling fields -->
+  <g fill="none" stroke="#d8b56a" stroke-width="60" stroke-linecap="round">
+    <path d="M0 600 C200 520, 400 680, 800 600 C1200 520, 1400 680, 1600 600" opacity="0.9" stroke="#d4a85a" />
+    <path d="M0 660 C300 560, 500 740, 900 660 C1300 580, 1500 740, 1600 700" opacity="0.8" stroke="#c98f45" />
+  </g>
+  <!-- sun -->
+  <circle cx="1300" cy="150" r="90" fill="#ffd36b" opacity="0.95" />
+  <!-- foreground wheat silhouettes -->
+  <g transform="translate(100,500) scale(1.2)" fill="#8a5a2b">
+    <path d="M20 0 C18 -20, 30 -40, 20 -60 C10 -40, 22 -20, 20 0 Z" />
+    <path d="M60 10 C58 -10, 70 -30, 60 -50 C50 -30, 62 -10, 60 10 Z" />
+    <path d="M100 -10 C98 -30, 110 -50, 100 -70 C90 -50, 102 -30, 100 -10 Z" />
+  </g>
+</svg>

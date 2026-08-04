@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+  <rect width="800" height="600" fill="#fff9f0" />
+  <!-- bowl of flour -->
+  <g transform="translate(140,120)">
+    <ellipse cx="260" cy="320" rx="220" ry="80" fill="#e6d6b3" />
+    <path d="M60 260 Q260 420 460 260 Q360 200 260 240 Q160 200 60 260 Z" fill="#f7f0de" />
+    <!-- wheat grains scattered -->
+    <g fill="#c99e4a">
+      <ellipse cx="220" cy="220" rx="8" ry="14" transform="rotate(-20 220 220)" />
+      <ellipse cx="260" cy="200" rx="8" ry="14" transform="rotate(10 260 200)" />
+      <ellipse cx="300" cy="230" rx="8" ry="14" transform="rotate(30 300 230)" />
+      <ellipse cx="200" cy="250" rx="8" ry="14" transform="rotate(-10 200 250)" />
+      <ellipse cx="320" cy="210" rx="8" ry="14" transform="rotate(5 320 210)" />
+    </g>
+    <!-- sack -->
+    <rect x="20" y="60" width="240" height="220" rx="12" fill="#d6b48a" />
+    <path d="M20 60 Q140 10 260 60" fill="#caa56b" />
+  </g>
+</svg>
