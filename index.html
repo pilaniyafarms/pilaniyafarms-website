@@ -3,91 +3,142 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Pilaniya Farms — Fresh, Sustainable Produce</title>
-  <meta name="description" content="Pilaniya Farms grows fresh, sustainably farmed fruits and vegetables for our local community.">
+  <title>Pilaniya Farms — Pure. Natural. Local.</title>
+  <meta name="description" content="Pilaniya Farms — family-run organic farm producing seasonal vegetables, fruits, dairy and farm experiences in a sustainable way.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="/">Pilaniya Farms</a>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav id="site-nav" class="site-nav">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Pilaniya Farms</a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle menu">☰</button>
+      <nav id="siteNav" class="site-nav" aria-label="Main navigation">
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#sustainability">Sustainability</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#produce">Produce</a></li>
+          <li><a href="#experience">Visit</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact" class="cta">Order / Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <h1>Fresh produce from our family to your table</h1>
-        <p>At Pilaniya Farms we grow seasonal fruits and vegetables using sustainable methods to nourish our community.</p>
-        <p><a class="btn" href="#products">See our produce</a></p>
+    <section id="home" class="hero">
+      <div class="hero-content container">
+        <h1>From our fields to your table</h1>
+        <p>Organic, seasonal produce and handcrafted dairy — sustainably grown at Pilaniya Farms.</p>
+        <div class="hero-actions">
+          <a href="#produce" class="btn btn-primary">Shop Seasonal Produce</a>
+          <a href="#experience" class="btn btn-outline">Plan a Visit</a>
+        </div>
       </div>
+      <div class="hero-image" aria-hidden="true"></div>
     </section>
 
     <section id="about" class="container about">
-      <h2>About Pilaniya Farms</h2>
-      <p>Pilaniya Farms is a small family-run farm committed to regenerative agriculture, soil health, and delivering the freshest produce possible. We focus on seasonal crops and partner with local markets and restaurants.</p>
+      <div class="about-grid">
+        <div>
+          <h2>Our story</h2>
+          <p>Pilaniya Farms is a family-run farm committed to regenerative practices, biodiversity, and high-quality, nutrient-rich food. We grow using minimal intervention and focus on community-supported agriculture.</p>
+          <ul class="highlights">
+            <li>Certified organic practices</li>
+            <li>Small-batch dairy &amp; preserves</li>
+            <li>Farm tours &amp; seasonal events</li>
+          </ul>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>10+</strong><span>Years</span></div>
+          <div class="stat"><strong>50+</strong><span>Varieties</span></div>
+          <div class="stat"><strong>100%</strong><span>Local</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="products" class="container products">
-      <h2>Products</h2>
-      <div class="grid">
+    <section id="produce" class="container produce">
+      <h2>Seasonal Produce &amp; Goods</h2>
+      <p class="lead">Fresh from harvest — available for delivery and pickup.</p>
+      <div class="cards">
         <article class="card">
-          <h3>Seasonal Vegetables</h3>
-          <p>Leafy greens, root vegetables, and market-ready produce harvested at peak freshness.</p>
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Fresh vegetables">
+          <h3>Vegetables</h3>
+          <p>Leafy greens, heirloom tomatoes, eggplant and seasonal roots.</p>
         </article>
         <article class="card">
-          <h3>Fresh Fruits</h3>
-          <p>Small-batch fruit varieties grown without synthetic pesticides.</p>
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Farm eggs and dairy">
+          <h3>Dairy &amp; Eggs</h3>
+          <p>Fresh milk, yogurt and pasture-raised eggs from our small herd and flocks.</p>
         </article>
         <article class="card">
-          <h3>CSA Boxes</h3>
-          <p>Weekly or biweekly boxes packed with a curated selection from the farm.</p>
+          <img src="https://images.unsplash.com/photo-1513628253939-010e64ac66cd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Preserves and honey">
+          <h3>Artisanal Goods</h3>
+          <p>Jams, pickles and honey made on-site using seasonal harvests.</p>
         </article>
       </div>
     </section>
 
-    <section id="sustainability" class="container sustainability">
-      <h2>Sustainability</h2>
-      <p>We use cover cropping, composting, and reduced-till practices to improve soil health and biodiversity. Our goal is to leave the land healthier than we found it.</p>
+    <section id="experience" class="visit container">
+      <div class="visit-grid">
+        <div>
+          <h2>Visit the Farm</h2>
+          <p>Join a guided tour, attend a seasonal workshop, or book a farm-to-table lunch.</p>
+          <a href="#contact" class="btn btn-primary">Book a Visit</a>
+        </div>
+        <aside>
+          <h3>Hours &amp; Pickup</h3>
+          <p>Pickup &amp; market days: Sat 9am–2pm. Contact us for weekday pickup slots.</p>
+          <h3>Location</h3>
+          <p>Pilaniya Village — directions provided after booking.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Farm landscape"></button>
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0"><img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Fresh produce"></button>
+        <button class="gallery-item" data-src="https://images.unsplash.com/photo-1533777324565-a040eb52fac2?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0"><img src="https://images.unsplash.com/photo-1533777324565-a040eb52fac2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Farmers at work"></button>
+      </div>
     </section>
 
     <section id="contact" class="container contact">
-      <h2>Contact</h2>
-      <p>Have questions or want to order? Reach out using the form below or email hello@pilaniyafarms.example</p>
-      <form id="contact-form">
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <button type="submit" class="btn">Send</button>
-        <p id="form-status" class="form-status" aria-live="polite"></p>
+      <h2>Get in touch</h2>
+      <p class="lead">Place an order, ask a question, or plan your visit.</p>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button class="btn btn-primary" type="submit">Send Message</button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; Pilaniya Farms — Fresh produce &middot; All rights reserved.</p>
+    <div class="container footer-inner">
+      <div>© Pilaniya Farms — Sustainable &amp; Local</div>
+      <nav class="social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img src="" alt="" class="lightbox-img">
+  </div>
+
+  <script src="/script.js" defer></script>
 </body>
 </html>
