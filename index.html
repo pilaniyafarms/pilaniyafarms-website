@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pilaniya Farms — Fresh, Sustainable Produce</title>
+  <meta name="description" content="Pilaniya Farms grows fresh, sustainably farmed fruits and vegetables for our local community.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Pilaniya Farms</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#sustainability">Sustainability</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Fresh produce from our family to your table</h1>
+        <p>At Pilaniya Farms we grow seasonal fruits and vegetables using sustainable methods to nourish our community.</p>
+        <p><a class="btn" href="#products">See our produce</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About Pilaniya Farms</h2>
+      <p>Pilaniya Farms is a small family-run farm committed to regenerative agriculture, soil health, and delivering the freshest produce possible. We focus on seasonal crops and partner with local markets and restaurants.</p>
+    </section>
+
+    <section id="products" class="container products">
+      <h2>Products</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Seasonal Vegetables</h3>
+          <p>Leafy greens, root vegetables, and market-ready produce harvested at peak freshness.</p>
+        </article>
+        <article class="card">
+          <h3>Fresh Fruits</h3>
+          <p>Small-batch fruit varieties grown without synthetic pesticides.</p>
+        </article>
+        <article class="card">
+          <h3>CSA Boxes</h3>
+          <p>Weekly or biweekly boxes packed with a curated selection from the farm.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sustainability" class="container sustainability">
+      <h2>Sustainability</h2>
+      <p>We use cover cropping, composting, and reduced-till practices to improve soil health and biodiversity. Our goal is to leave the land healthier than we found it.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Have questions or want to order? Reach out using the form below or email hello@pilaniyafarms.example</p>
+      <form id="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Pilaniya Farms — Fresh produce &middot; All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
